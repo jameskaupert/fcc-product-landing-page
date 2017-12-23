@@ -1,20 +1,61 @@
 /* Typography */
 body {
   font-family: "Open Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  line-height: 1.6rem;
+  color: #212121;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1,
 h2 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Links */
+a, a.footer-link {
+  text-decoration: none;
+}
+
+a.nav-link, a.nav-link:visited {
+  color: #ffffff;
+}
+
+a.footer-link, a.footer-link:visited {
+    color: #212121;
+}
+
+a.nav-link:hover {
+  color: #D1C4E9;
+}
+
+a.footer-link:hover {
+  color: #757575;
+}
+
+/* Body positioning */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* Header */
 #header {
-  background-color: #673ab7;
+  position: fixed;
+  background-color: #512da8;
   color: #ffffff;
   padding: 1rem 0;
   height: 40px;
@@ -23,6 +64,7 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .img-container {
@@ -46,24 +88,94 @@ h2 {
   justify-content: space-between;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav-link:visited {
-  color: #ffffff;
-}
-
-.nav-link:hover {
-  color: #d1c4e9;
-}
-
+/* Main Container */
 #main-container {
+  position: relative;
+  top: 80px;
   width: 66%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 9;
+}
+
+/* Anchors */
+#tagline,
+#clients {
+  position: relative;
+}
+
+#get-started,
+#happy-clients {
+  position: absolute;
+  top: -80px;
+}
+
+/* Email Form */
+#tagline {
+  padding: 1rem 0;
+}
+
+#form {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+#email {
+  padding: 0.25rem;
+  width: 18rem;
+  border: 1px solid #bdbdbd;
+  outline: 0;
+}
+
+#email:focus {
+  outline: 0;
+  border: 1px solid #512da8;
+}
+
+.btn {
+  padding: 0.75rem;
+  width: 8rem;
+  border-radius: 10px;
+  border: 1px solid #ff9800;
+  background-color: #ff9800;
+  color: #ffffff;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #f57c00;
+  border: 1px solid #f57c00;
+}
+
+/* Features Section */
+
+#features {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.feature-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.feature-text {
+  padding: 1rem 1rem 1rem 2rem;
 }
 
 #video {
@@ -71,6 +183,64 @@ h2 {
   height: 28.125vw;
 }
 
+/* Pricing */
+#pricing {
+    padding: 3rem 0 2rem 0;
+    display: flex;
+    flex: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.packages {
+    border: 1px solid black;
+    padding: 1rem;
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price {
+    padding: 2rem;
+}
+
+.packages p {
+    line-height: 2.1rem;
+}
+
+.pkg-btn {
+    margin: 1rem 0 0.5rem 0;
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+#footer-right {
+    width: 14rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+#copyright {
+  text-align: right;
+}
+
+/* Media Queries for smaller screens */
 @media all and (max-width: 700px) {
   #header {
     height: auto;
@@ -83,17 +253,9 @@ h2 {
     max-width: 300px;
   }
 
-  /* #nav-bar {
-        width: 100%;
-    } */
-
-  /* #nav-bar ul {
-        align-items: center;
-        justify-content: center;
-    } */
-
   #main-container {
-    width: 100%;
+    width: 100vw;
+    top: 100px;
   }
 
   #video {
@@ -104,10 +266,15 @@ h2 {
 
 @media all and (max-width: 420px) {
   #header {
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 0.75rem 0;
   }
   #header-img {
-    max-width: 100%;
+    max-width: 94vw;
+  }
+
+  .img-container,
+  #nav-bar {
+    padding: 0;
   }
 
   #nav-bar {
@@ -123,5 +290,36 @@ h2 {
     height: 2rem;
     display: flex;
     align-items: center;
+  }
+
+  #tagline {
+    padding: 1rem 1.5rem;
+  }
+
+  #form {
+    padding: 0;
+    width: 100vw;
+  }
+
+  #email {
+    width: 80vw;
+  }
+
+  #main-container {
+    top: 156px;
+  }
+
+  #get-started,
+  #happy-clients {
+    position: absolute;
+    top: -156px;
+  }
+
+  .feature-row {
+    width: 90vw;
+  }
+
+  .feature-text {
+    padding: 1rem 1rem 1rem 1rem;
   }
 }
