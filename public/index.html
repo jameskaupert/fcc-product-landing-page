@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <title>Learn Your Wedding Dance!</title>
 </head>
+
 <body>
-  <h1>Product Landing Page</h1>
+    <header id="header">
+        <img src="http://placekitten.com/300/100" alt="logo" id="header-img">
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a href="#video" class="nav-link">Features</a>
+                </li>
+                <li>
+                    <a href="#happy-clients" class="nav-link">Happy Clients</a>
+                </li>
+                <li>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main-container">
+        <h1 id="tagline">Learn to dance for your special day</h1>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <input type="email" name="email" id="email" placeholder="Enter your email address">
+            <input type="submit" value="Get Started" id="submit">
+        </form>
+        <iframe id="video" width="420" height="320" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" gesture="media"
+            allow="encrypted-media" allowfullscreen>
+        </iframe>
+        <div id="happy-clients">
+            <h2>Testimonials</h2>
+        </div>
+
+        <div id="pricing">
+            <h2>Pricing</h2>
+        </div>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <div id="copyright">Copyright 2017</div>
+        </footer>
+    </div>
+    <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
 </body>
+
 </html>
