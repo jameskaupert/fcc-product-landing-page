@@ -1,6 +1,18 @@
+.feature {
+  display: flex;
+  padding: 1rem;
+}
+
+.feature-icon {
+  border: 1px solid blue;
+  background-color: blue;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
 @media all and (min-width: 800px) {
   body {
-    background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
