@@ -4,11 +4,13 @@
 }
 
 .feature-icon {
-  border: 1px solid blue;
-  background-color: blue;
   width: 2rem;
   height: 2rem;
   margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 @media all and (min-width: 800px) {
